@@ -6,7 +6,7 @@
 /*   By: rbestman <rbestman@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:15:31 by rbestman          #+#    #+#             */
-/*   Updated: 2024/12/27 17:13:54 by rbestman         ###   ########.fr       */
+/*   Updated: 2024/12/27 17:32:34 by rbestman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ static char	*get_line(char **leftover)
 	while ((*leftover)[i] && (*leftover)[i] != '\n')
 		i++;
 	line = ft_substr(*leftover, 0, i + ((*leftover)[i] == '\n'));
-	*leftover_new = ft_strdup(*leftover + i + ((*leftover)[i] == '\n'));
+	leftover_new = ft_strdup(*leftover + i + ((*leftover)[i] == '\n'));
 	free(*leftover);
-	*leftover = new_leftover;
+	*leftover = leftover_new;
 	return (line);
 }
 
