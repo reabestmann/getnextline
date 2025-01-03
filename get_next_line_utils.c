@@ -6,7 +6,7 @@
 /*   By: rbestman <rbestman@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 16:55:35 by rbestman          #+#    #+#             */
-/*   Updated: 2024/12/27 17:10:27 by rbestman         ###   ########.fr       */
+/*   Updated: 2025/01/03 16:39:43 by rbestman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,15 @@ char	*ft_strdup(char *src)
 	return (dup);
 }
 
-static char	*ft_edge(void)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*substr;
-
-	substr = malloc (1);
-	if (substr)
-		substr[0] = '\0';
-	return (substr);
+	while (*s != (char)c)
+	{
+		if (*s == '\0')
+			return (NULL);
+		s++;
+	}
+	return ((char *)s);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -85,7 +86,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (ft_edge());
+		return (NULL);
 	if (len > ft_strlen(s) - (size_t)start)
 		len = ft_strlen(s) - (size_t)start;
 	substr = malloc(len + 1);

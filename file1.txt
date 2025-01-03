@@ -1,0 +1,6 @@
+hello
+this is a text file
+the anchylosaurus is a beautiful dinosaur
+its tail is its weapon
+what is your weapon?
+
