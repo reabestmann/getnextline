@@ -6,7 +6,7 @@
 /*   By: rbestman <rbestman@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 16:55:35 by rbestman          #+#    #+#             */
-/*   Updated: 2025/01/03 16:39:43 by rbestman         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:21:45 by rbestman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (NULL);
+		return (ft_strdup(""));
 	if (len > ft_strlen(s) - (size_t)start)
 		len = ft_strlen(s) - (size_t)start;
 	substr = malloc(len + 1);
