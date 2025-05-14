@@ -6,22 +6,11 @@
 /*   By: rbestman <rbestman@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:15:31 by rbestman          #+#    #+#             */
-/*   Updated: 2025/01/17 13:21:10 by rbestman         ###   ########.fr       */
+/*   Updated: 2025/01/18 12:05:42 by rbestman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-/*
-static char	*update_buf(char *big_buf, char *line)
-{
-	char		*temp_buf;
-	size_t		len;
-
-	len = ft_strlen(line);
-	temp_buf = ft_substr(big_buf, len, ft_strlen(big_buf) - len);
-	free(big_buf);
-	return (temp_buf);
-}*/
 
 static char	*append_buffers(char *small_buf, char *big_buf)
 {
